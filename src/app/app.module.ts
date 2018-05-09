@@ -5,11 +5,18 @@ import { ListComponent } from './list/list.component';
 import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
 import { routing } from './app.routing';
 import { FrontPageComponent } from './front-page/front-page.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+
+
+  export var masterFirebaseConfig = {
+    apiKey: masterFirebaseConfig.apiKey,
+    authDomain: masterFirebaseConfig.authDomain,
+    databaseURL: masterFirebaseConfig.databaseURL,
+    storageBucket: masterFirebaseConfig.storageBucket
+  };
 
 
 

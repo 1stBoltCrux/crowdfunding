@@ -1,0 +1,35 @@
+{ "albums": [{
+    "title": "Coffee Grabber",
+    "about": "A game about grabbing coffee, keeping other players from grabbing your coffee/first person shooter.",
+    "stretchGoals": "We would love to have this game also make you a cup of coffee. We would really love if the game could hurt you physically or at least make you cry.",
+    "gamePlay": "You run around at high speeds snatching piping hot coffee from the hands of your friends and loved ones.",
+    "story": "You are the COFFEE GRABBER life for you is GRABBING COFFEE that's it.",
+    "image": "../assets/coffee-grabber.png",
+    "id": 0,
+    "video": "video",
+    "moneyPledged": 0,
+    "goal": 130000
+    }, {
+      "title": "Resident Weevil",
+      "about": "A game that is in no way related to the hit series 'Resident Evil'. Resident Weevil is about an innocent man just trying to get through a day of work and get home to his loving family.",
+      "stretchGoals": "We would love to have this game let you play as a woman. We would really love if the game could make you feel a range of emotions you never thought possible.",
+      "gamePlay": "You run around at low speeds trying to keep this guy from grabbing your coffee and hopefully make it through the day.",
+      "story": "You are not the COFFEE GRABBER your just a normal guy.",
+      "image": "../assets/coffee-grabber.png",
+      "id": 0,
+      "video": "video",
+      "moneyPledged": 0,
+      "goal": 100000
+      }, {
+        "title": "Jump Dingo",
+        "about": "A game that tries to recreate a normal day at the office except with rabid dingos.",
+        "stretchGoals": "We would love to have this game also include wolverines as a selectable enemy class. We would like to create a realistic feeling of ennui in the player",
+        "gamePlay": "You run around at high speeds jumping over dingos and keeping the COFFEE GRABBER away from your piping hot coffee.",
+        "story": "You are the not COFFEE GRABBER your life is an endless hell of jumping dingos and spilling coffee.",
+        "image": "../assets/coffee-grabber.png",
+        "id": 0,
+        "video": "video",
+        "moneyPledged": 0,
+        "goal": 69000
+  }]
+}
