@@ -39,8 +39,14 @@ export class ProjectDetailComponent implements OnInit {
 
 
   pledge(curProject, inputNumber){
-    curProject.moneyPledged += parseInt(inputNumber);
-    curProject.percentBacked = ((curProject.moneyPledged / curProject.goal) * 100).toString() + '%';
+    let inputParse = parseInt(inputNumber)
+    if (inputNumber === '' || inputParse < 0) {
+      return;
+    } else {
+      curProject.moneyPledged += inputParse;
+      curProject.percentBacked = ((curProject.moneyPledged / curProject.goal) * 100).toString() + '%';
+    }
+
   }
 
   constructor(private route: ActivatedRoute, private location: Location, private projectService: ProjectService) { }

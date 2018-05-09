@@ -35,7 +35,7 @@
           <p>pledged of ${{addCommas(projectToDisplay.goal)}} goal</p>
           <p>Backers</p>
           <p>Days to go</p>
-          <input #inputPledge>
+          <input #inputPledge type="number">
           <button class="btn btn-info" (click)="pledge(projectToDisplay, inputPledge.value)">Pledge!</button>
         </div>
         <div class="pledgeDivBottom">
