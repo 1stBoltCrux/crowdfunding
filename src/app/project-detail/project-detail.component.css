@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+.rightTitleDiv {
+  /*background-color: green;*/
+  height: 100px;
+  margin-bottom: 25px;
+  padding-top: 60px;
+}
+
+.leftTitle {
+  background-color: lightblue;
+  padding-left: 30px;
+}
+
+.imgLeft img{
+  border-radius: 100%;
+  width: 60px;
+}
+
+.imgLeft {
+  margin-bottom: 15px;
+  padding-top: 50px;
+}
+.rightTitle {
+  background-color: salmon
+}
+
+.rowOne {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+.video1 img{
+  max-width: 500px;
+  background-color: blue;
+}
+
+.parentBar {
+  border: 2px #009E74 solid;
+}
+
+.childBar {
+  height: 5px;
+  background-color: #009E74;
+  max-width: 100%
+}

@@ -1,4 +1,47 @@
 <app-nav></app-nav>
 <div class="container">
-  <h1>{{projectToDisplay.title}}</h1>
+  <div class="row rowOne">
+    <div class="col-md-2 leftTitle">
+    <div class="imgLeft">
+      <img src="https://ksr-ugc.imgix.net/assets/019/061/869/cd8b68fdcc432c662d3e9f1398509a4b_original.png?w=80&h=80&fit=crop&v=1509800419&auto=format&q=92&s=5cc8b610ba0729b5d527683252bb92ad" alt="">
+    </div>
+      <div class="authorDiv">
+        <p>By Safari Games</p>
+      </div>
+    </div>
+    <div class="col rightTitle">
+      <div class="rightTitleDiv">
+        <h1>{{projectToDisplay.title}}</h1>
+      </div>
+      <div class="rightTitleAbout">
+        <p>{{projectToDisplay.about}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="mid-page">
+    <div class="row rowTwo">
+      <div class="col-md-6">
+        <div class="video1">
+          <img src="{{projectToDisplay.video}}" >
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="parentBar">
+          <div [style.width]="projectToDisplay.percentBacked" class="childBar">
+          </div>
+        </div>
+        <div class="pledgeDiv">
+          <p>${{addCommas(projectToDisplay.moneyPledged)}}</p>
+          <p>pledged of ${{addCommas(projectToDisplay.goal)}} goal</p>
+          <p>Backers</p>
+          <p>Days to go</p>
+          <input #inputPledge>
+          <button class="btn btn-info" (click)="pledge(projectToDisplay, inputPledge.value)">Pledge!</button>
+        </div>
+        <div class="pledgeDivBottom">
+          <button class="btn btn-light"> &#9829; Remind Me</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
