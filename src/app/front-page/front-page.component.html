@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="imageDiv">
+        <img src="https://ksr-ugc.imgix.net/assets/021/170/992/8f304512f9da692c8fc7a206b35fcf3e_original.jpg?q=80&blur=false&w=500&fit=true&v=1525873646&auto=format&s=fdb435b48377ef9d7fe9de3fa7a10f69" alt="myst the game">
+      </div>
+    </div>
+    <div class="col game-col">
+      <ul class="listUl">
+        <li *ngFor='let project of PROJECTS'>
+          <div class="listDiv">
+            <div class="img-box">
+              <img src="{{project.image}}">
+            </div>
+            <p class="project-title">{{project.title}}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
