@@ -2,12 +2,14 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ListComponent } from './list/list.component';
 import { NavComponent } from './nav/nav.component';
-import { FrontPageComponent } from './front-page/front-page.component'
+import { FrontPageComponent } from './front-page/front-page.component';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: NavComponent
+    component: WelcomeComponent
   },
   {
     path: 'list',
@@ -16,6 +18,10 @@ const appRoutes: Routes = [
   {
     path: 'front-page',
     component: FrontPageComponent
+  },
+  {
+    path: 'projects/:id',
+    component: ProjectDetailComponent
   }
 ];
 

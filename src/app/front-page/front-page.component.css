@@ -2,7 +2,9 @@
   list-style-type: none;
   display: block;
 }
-
+.listDiv:hover {
+  cursor: pointer;
+}
 .listDiv {
   height: 100px;
   border-bottom: 1px #c6c6c6 solid;

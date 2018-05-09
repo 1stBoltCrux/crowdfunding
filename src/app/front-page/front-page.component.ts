@@ -11,12 +11,14 @@ import { Router } from '@angular/router';
   providers: [ProjectService]
 })
 export class FrontPageComponent implements OnInit {
-  PROJECTS: Project[];
-
-
 
   constructor(private router: Router, private projectService: ProjectService){}
 
+  PROJECTS: Project[];
+
+  goToDetailPage(clickedProject: Project) {
+    this.router.navigate(['projects', clickedProject.id]);
+  }
 
   ngOnInit(){
     this.PROJECTS = this.projectService.getProjects();

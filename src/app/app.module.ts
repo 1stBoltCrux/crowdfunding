@@ -8,6 +8,8 @@ import { HttpModule } from '@angular/http';
 
 import { routing } from './app.routing';
 import { FrontPageComponent } from './front-page/front-page.component';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 
@@ -16,7 +18,9 @@ import { FrontPageComponent } from './front-page/front-page.component';
     AppComponent,
     ListComponent,
     NavComponent,
-    FrontPageComponent
+    FrontPageComponent,
+    ProjectDetailComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

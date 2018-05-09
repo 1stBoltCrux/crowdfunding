@@ -7,12 +7,12 @@
     </div>
     <div class="col game-col">
       <ul class="listUl">
-        <li *ngFor='let project of PROJECTS'>
+        <li *ngFor='let project of PROJECTS' (click)="goToDetailPage(project)">
           <div class="listDiv">
             <div class="img-box">
               <img src="{{project.image}}">
             </div>
-            <p class="project-title">{{project.title}}</p>
+            <p class="project-title" routerLink="../projects">{{project.title}}</p>
           </div>
         </li>
       </ul>
