@@ -1,0 +1,54 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Project to Inventory</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Project Title:</label>
+        <br>
+        <input #newTitle>
+      </div>
+
+      <div>
+        <label>Project About:</label>
+        <br>
+        <textarea #newAbout></textarea>
+      </div>
+
+      <div>
+        <label>Project Stretch Goals:</label>
+        <br>
+        <textarea #newStretchGoals></textarea>
+      </div>
+
+      <div>
+        <label>Project Gameplay Description:</label>
+        <br>
+        <textarea #newGameplay></textarea>
+      </div>
+      <div>
+        <label>Project Story Description:</label>
+        <br>
+        <textarea #newStory></textarea>
+      </div>
+      <label>Image</label>
+      <br>
+      <input #newImage>
+      <br>
+      <label>Video</label>
+      <br>
+      <input #newVideo>
+      <br>
+      <label>Money Pledged</label>
+      <br>
+      <input #newMoneyPledged>
+      <br>
+      <label>Goal</label>
+      <br>
+      <input #newGoal>
+      <button (click)="submitForm(newTitle.value, newAbout.value, newStretchGoals.value, newGameplay.value, newStory.value, newImage.value, newVideo.value, newMoneyPledged.value, newGoal.value);  newTitle.value=''; newAbout.value=''; newStretchGoals.value=''; newGameplay.value=''; newStory.value=''; newImage.value=''; newVideo.value=''; newMoneyPledged.value=''; newGoal.value=''; ">Add</button>
+    </div>
+  </div>
+</div>

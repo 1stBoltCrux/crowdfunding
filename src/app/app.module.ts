@@ -8,10 +8,11 @@ import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 import { FrontPageComponent } from './front-page/front-page.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
-import { WelcomeComponent } from './welcome/welcome.component';
 import { masterFirebaseConfig } from './api-keys'
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AddProjectComponent } from './add-project/add-project.component';
+// import { MoneyPledgedPipe } from './filterResult.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     NavComponent,
     FrontPageComponent,
     ProjectDetailComponent,
-    WelcomeComponent
+    AddProjectComponent,
+    // MoneyPledgedPipe
   ],
   imports: [
     BrowserModule,

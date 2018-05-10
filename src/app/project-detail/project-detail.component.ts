@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 import { Project } from '../model/project.model';
 import { ProjectService } from '../project.service';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-project-detail',
@@ -16,20 +17,20 @@ export class ProjectDetailComponent implements OnInit {
   projectToDisplay;
 
 
-  addCommas(number) {
-    let string = number.toString();
+  addCommas(num) {
+    let numStr = num.toString();
     let array = [];
     let extra = '';
-    if (string.length < 3) {
-      return string;
+    if (numStr.length < 3) {
+      return numStr;
     }
-    if (string.length % 3 === 1) {
-      extra = string.slice(0, 1);
-    } else if (string.length % 3 === 2) {
-      extra = string.slice(0, 2);
+    if (numStr.length % 3 === 1) {
+      extra = numStr.slice(0, 1);
+    } else if (numStr.length % 3 === 2) {
+      extra = numStr.slice(0, 2);
     }
-    for (var i = (string.length - 3) ; i >= 0; i-=3) {
-      array.unshift(string.slice(i, 3 + i));
+    for (var i = (numStr.length - 3) ; i >= 0; i-=3) {
+      array.unshift(numStr.slice(i, 3 + i));
     }
     if (extra) {
       return extra + ',' + array.join(',');
@@ -37,25 +38,29 @@ export class ProjectDetailComponent implements OnInit {
     return array.join(',');
   }
 
-
-  pledge(curProject, inputNumber){
-    let inputParse = parseInt(inputNumber)
-    if (inputNumber === '' || inputParse < 0) {
-      return;
-    } else {
-      curProject.moneyPledged += inputParse;
-      curProject.percentBacked = ((curProject.moneyPledged / curProject.goal) * 100).toString() + '%';
-    }
-
-  }
-
-  constructor(private route: ActivatedRoute, private location: Location, private projectService: ProjectService) { }
+  constructor(private route: ActivatedRoute, private location: Location, private projectService: ProjectService, private Router: Router) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
       this.projectId = urlParameters['id'];
     });
-    this.projectToDisplay = this.projectService.getProjectById(this.projectId);
+
+
+    this.projectService.getProjectById(this.projectId).subscribe(dataLastEmittedFromObserver => {
+      this.projectToDisplay = new Project(dataLastEmittedFromObserver.title,
+                                          dataLastEmittedFromObserver.about,
+                                          dataLastEmittedFromObserver.stretchGoals,
+                                          dataLastEmittedFromObserver.gamePlay,
+                                          dataLastEmittedFromObserver.story,
+                                          dataLastEmittedFromObserver.image,
+                                          dataLastEmittedFromObserver.video,
+                                          dataLastEmittedFromObserver.moneyPledged,
+                                          dataLastEmittedFromObserver.goal)
+    })
+  }
+
+  fundProject(projectToFund, funds){
+    this.projectService.pledge(projectToFund, funds);
   }
 
 }

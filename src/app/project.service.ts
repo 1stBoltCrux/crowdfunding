@@ -17,7 +17,24 @@ export class ProjectService {
       return this.projects;
     }
 
+    addProject(newProject: Project) {
+      this.projects.push(newProject);
+    }
+
     getProjectById(projectId: string){
       return this.database.object('projects/' + projectId);
     }
+
+    pledge(curProject, inputNumber){
+      let inputParse = parseInt(inputNumber)
+      if (inputNumber === '' || inputParse < 0) {
+        return;
+      } else {
+        var projectEntryInFirebase = this.getProjectById(curProject.$key)
+        projectEntryInFirebase.update({moneyPledged: curProject.moneyPledged += inputParse});
+      }
+    }
+
+
+
 }
