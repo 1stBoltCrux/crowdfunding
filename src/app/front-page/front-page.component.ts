@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../model/project.model';
-import { PROJECTS } from '../projectObjects';
+
 import { ProjectService } from '../project.service';
 import { Router } from '@angular/router';
-
+import { FirebaseListObservable } from 'angularfire2/database';
 @Component({
   selector: 'app-front-page',
   templateUrl: './front-page.component.html',
@@ -14,14 +14,14 @@ export class FrontPageComponent implements OnInit {
 
   constructor(private router: Router, private projectService: ProjectService){}
 
-  PROJECTS: Project[];
+  projects: FirebaseListObservable<any[]>;
 
-  goToDetailPage(clickedProject: Project) {
-    this.router.navigate(['projects', clickedProject.id]);
+  goToDetailPage(clickedProject) {
+    this.router.navigate(['projects', clickedProject.$key]);
   }
 
   ngOnInit(){
-    this.PROJECTS = this.projectService.getProjects();
+    this.projects = this.projectService.getProjects();
   }
 
 }

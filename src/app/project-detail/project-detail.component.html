@@ -9,12 +9,13 @@
         <p>By Safari Games</p>
       </div>
     </div>
+
     <div class="col rightTitle">
       <div class="rightTitleDiv">
-        <h1>{{projectToDisplay.title}}</h1>
+        <h1>{{(projectToDisplay | async)?.title}}</h1>
       </div>
       <div class="rightTitleAbout">
-        <p>{{projectToDisplay.about}}</p>
+        <p>{{(projectToDisplay | async)?.about}}</p>
       </div>
     </div>
   </div>
@@ -22,7 +23,7 @@
     <div class="row rowTwo">
       <div class="col-md-6">
         <div class="video1">
-          <img src="{{projectToDisplay.video}}" >
+          <img src="{{(projectToDisplay | async)?.image}}" >
         </div>
       </div>
       <div class="col-md-4">
@@ -31,8 +32,8 @@
           </div>
         </div>
         <div class="pledgeDiv">
-          <p>${{addCommas(projectToDisplay.moneyPledged)}}</p>
-          <p>pledged of ${{addCommas(projectToDisplay.goal)}} goal</p>
+          <p>${{addCommas((projectToDisplay | async)?.moneyPledged)}}</p>
+          <p>pledged of ${{addCommas((projectToDisplay | async)?.goal)}} goal</p>
           <p>Backers</p>
           <p>Days to go</p>
           <input #inputPledge type="number">

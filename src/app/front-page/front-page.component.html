@@ -7,7 +7,7 @@
     </div>
     <div class="col game-col">
       <ul class="listUl">
-        <li *ngFor='let project of PROJECTS' (click)="goToDetailPage(project)">
+        <li *ngFor="let project of projects | async" (click)="goToDetailPage(project)">
           <div class="listDiv">
             <div class="img-box">
               <img src="{{project.image}}">

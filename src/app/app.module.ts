@@ -9,14 +9,16 @@ import { routing } from './app.routing';
 import { FrontPageComponent } from './front-page/front-page.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { masterFirebaseConfig } from './api-keys'
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
-
-  export var masterFirebaseConfig = {
-    apiKey: masterFirebaseConfig.apiKey,
-    authDomain: masterFirebaseConfig.authDomain,
-    databaseURL: masterFirebaseConfig.databaseURL,
-    storageBucket: masterFirebaseConfig.storageBucket
-  };
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
 
 
 
@@ -33,7 +35,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

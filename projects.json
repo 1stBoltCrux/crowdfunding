@@ -1,4 +1,4 @@
-{ "albums": [{
+{ "projects": [{
     "title": "Coffee Grabber",
     "about": "A game about grabbing coffee, keeping other players from grabbing your coffee/first person shooter.",
     "stretchGoals": "We would love to have this game also make you a cup of coffee. We would really love if the game could hurt you physically or at least make you cry.",
@@ -15,7 +15,7 @@
       "stretchGoals": "We would love to have this game let you play as a woman. We would really love if the game could make you feel a range of emotions you never thought possible.",
       "gamePlay": "You run around at low speeds trying to keep this guy from grabbing your coffee and hopefully make it through the day.",
       "story": "You are not the COFFEE GRABBER your just a normal guy.",
-      "image": "../assets/coffee-grabber.png",
+      "image": "../assets/weevil.jpg",
       "id": 0,
       "video": "video",
       "moneyPledged": 0,
@@ -26,7 +26,7 @@
         "stretchGoals": "We would love to have this game also include wolverines as a selectable enemy class. We would like to create a realistic feeling of ennui in the player",
         "gamePlay": "You run around at high speeds jumping over dingos and keeping the COFFEE GRABBER away from your piping hot coffee.",
         "story": "You are the not COFFEE GRABBER your life is an endless hell of jumping dingos and spilling coffee.",
-        "image": "../assets/coffee-grabber.png",
+        "image": "../assets/dingo.jpg",
         "id": 0,
         "video": "video",
         "moneyPledged": 0,
